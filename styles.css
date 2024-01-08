@@ -1,0 +1,401 @@
+@font-face {
+    font-family: 'AustieBostInWonderland';
+    src: url('/fonts/AustieBostinWonderland.ttf') format('truetype');
+    
+}
+@font-face {
+    font-family: 'Gabriola';
+    src: url('/fonts/Gabriola.ttf') format('truetype');
+    
+}
+
+body{
+    font-family: Lato, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    margin: 0;
+    background-color: rgb(228, 242, 245);
+}
+.encabezado{
+    background-color: rgba(145, 136, 233, 0.911);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 20vh;
+}
+.encabezado h1{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding-top: 5vh;
+    margin: 0;
+    font-family: AustieBostInWonderland;
+    
+}
+.mi-icono {
+    display: inline-block;
+    width: 1em; 
+    height: 1em; 
+    background: url('/icons/carta-de-amor.png') no-repeat center center; 
+    background-size: cover; 
+    margin-left: 0.5em; 
+}
+hr {
+    margin: 0.01em auto;
+}
+
+.navbar {
+    background-color: rgba(188, 182, 236, 0.911);
+    padding: 10px;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.navbar li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.liElemento{
+    padding: 10px;
+    border-radius: 10px;
+
+}
+.liElemento:hover {
+    
+    background-color: #e7bf83; 
+    color: #fff; 
+}
+
+.contenedor{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5vh;
+    margin-inline: 15vh;
+    
+    border-radius: 5px;
+    
+}
+.entrada-blog {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    
+    margin: 1em auto;
+    transition: box-shadow 0.3s ease; 
+}
+.entrada-blog:hover{
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.entrada-blog h2 {
+    color: #7c62f3;
+    position: relative;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+.entrada-blog h2:hover {
+    color: #e958d1; 
+}
+.entrada-blog h2::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px; 
+    background-color: #e958d1; 
+    transform: scaleX(0); 
+    transform-origin: bottom left; 
+    transition: transform 0.3s ease; 
+    
+}
+
+.entrada-blog h2:hover::after {
+    transform: scaleX(1); 
+}
+
+.entrada-blog p {
+    color: #555;
+}
+.imagenBlog{
+    padding-inline: 25%;
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+}
+.enfasis {
+    font-weight: bold; 
+    color: #333; 
+    text-decoration: none; 
+    position: relative;
+    cursor: pointer;
+    transition: color 0.3s ease, text-decoration 0.3s ease, font-weight 0.3s ease; 
+}
+
+.enfasis:hover {
+    color: #b14dca; 
+    text-decoration: underline; 
+    font-weight: bold; 
+}
+dt{
+    font-weight: bold;
+    color: #7c62f3;
+}
+/* GALERIA */
+.contenedorG {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.imagen {
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.imagen:hover {
+    transform: scale(1.05);
+}
+
+.imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.titulo {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+/* POEMAS */
+.contenedorP {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    margin-top: 5vh;
+    margin-inline: 15vh;
+    
+    border-radius: 5px;
+}
+.poema {
+    max-width: 300px;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 2em;
+    display: inline-block;
+}
+
+.poema h2 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-family: Gabriola, Courier, monospace;
+}
+
+.poema p {
+    color: #555;
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    margin-inline: 3em;
+    font-family: Gabriola, Courier, monospace;
+}
+
+.autor {
+    font-style: italic;
+    color: #888;
+}
+/* TABLERO */
+figure {
+    margin: 0;
+}
+
+iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+figcaption {
+    text-align: center;
+    margin-top: 10px;
+    font-style: italic;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 1em;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+caption {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+/* SOBRE MI */
+.tarjeta-presentacion {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.tarjeta-presentacion img {
+    width: 50%;
+    border-radius: 50%;
+    margin-bottom: 1em;
+}
+
+form {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 1em;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Footer */
+.footer {
+    background-color: rgba(145, 136, 233, 0.911);;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 5vh;
+    margin-bottom: 0;
+}
+
+.contactos h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.contactos ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contactos li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.contactos a {
+    text-decoration: none;
+    color: white;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 0.8em;
+    color: rgb(0, 0, 255);
+}
+.facebook{
+    display: inline-block;
+    width: 1em; 
+    height: 1em; 
+    background: url('/icons/facebook.png') no-repeat center center; 
+    background-size: cover; 
+    margin-right: 0.2em; 
+    
+}
+.instagram{
+    display: inline-block;
+    width: 1em; 
+    height: 1em; 
+    background: url('/icons/instagram.png') no-repeat center center; 
+    background-size: cover; 
+    margin-right: 0.2em; 
+}
+.redX{
+    display: inline-block;
+    width: 1em; 
+    height: 1em; 
+    background: url('/icons/xtwitter.png') no-repeat center center; 
+    background-size: cover; 
+    margin-right: 0.2em; 
+}
+.youtube{
+    display: inline-block;
+    width: 1em; 
+    height: 1em; 
+    background: url('/icons/youtube.png') no-repeat center center; 
+    background-size: cover; 
+    margin-right: 0.2em; 
+}
